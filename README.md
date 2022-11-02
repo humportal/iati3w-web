@@ -22,7 +22,7 @@ This repository is paired with
 [iati3w-data](https://github.com/davidmegginson/iati3w-data), which
 handles the backend data preparation.
 
-## ## Build Setup
+## Build Setup
 
 ``` bash
 # install dependencies
@@ -42,68 +42,24 @@ $ npm run generate
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
 
 
----
-
-NB: the below documentation needs to be updated, as this site is now generated using the [Nuxt.js](https://nuxtjs.org) framework.
-
----
-
-
 ## Overview
 
 This web site will render entirely on in the browser. It depends on
 prepared data stored in JSON format at
-https://davidmegginson.github.io/iati3w-data/ and will load and render
+https://humportal.github.io/iati3w-data/ and will load and render
 that data as needed.
-
-The file ``docs/script.js`` is the top-level Javascript module for
-rendering pages. Most HTML pages inside ``docs/`` contain a
-[Nunjucks](https://mozilla.github.io/nunjucks/) template inside an
-HTML _script_ element, and them make a call out to a rendering
-function from ``docs/script.js`` to use the template to render content
-on the page.  For example, a (simplified) template might look like this:
-
-```
-<script id="template.demo" type="template">
-  <ul>
-    {% for name in names %}
-    <li>Name: {{ name }}</li
-    {% endfor %}
-  </ul>
-{% endfor %}
-</script>
-```
-
-And the call to render the template might look like this:
-
-```
-<script type="module" defer="defer">
-  import { render_demo } from "./script.js";
-  render_demo();
-</script>
-```
-
-The rendered content will replace the HTML element with the identifier
-"content", and the rest of the HTML page will stay the same:
-
-```
-<main>
-  <section id="content">
-    <p class="loading">Loading…</p>
-  </section>
-</main>
-```
-
-All paths in links are relative, so that you can run this when it's
-not at the root of a web site (useful for development).
 
 ## Credits
 
 David Megginson wrote the initial prototype, with support from Mark
-Brough and the team at Development Initiatives. Special thanks to the
-individuals and organisations in the humanitarian community who have
-provided information, made suggests, and given feedback, and special
-thanks to the many organisations who publish their activities in IATI
-and/or via the monthly 3W report that OCHA Somalia publishes.
+Brough and the team at Development Initiatives. The front-end code
+was subsequently rewritten by Mark Brough, using the Nuxt.js
+framework.
+
+Special thanks to the individuals and organisations in the humanitarian
+community who have provided information, made suggests, and given
+feedback, and special thanks to the many organisations who publish
+their activities in IATI and/or via the monthly 3W report that OCHA
+Somalia publishes.
 
 And finally, thanks to GitHub for providing free hosting.
