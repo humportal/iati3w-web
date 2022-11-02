@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import axios from 'axios'
 
-const baseURL = 'https://devinit.github.io/iati3w-data'
+const baseURL = 'https://humportal.github.io/iati3w-data'
 
 export const state = () => ({
   orgs: {},
@@ -70,7 +70,7 @@ export const actions = {
     if (Object.keys(state.geoJSONData).length > 0) {
       return true
     }
-    const { data } = await axios.get('https://brough.io/somalia-3w-iati/somalia-adm1.geojson')
+    const { data } = await axios.get('/somalia-adm1.geojson')
     commit('setGeoJSONData', data)
   }
 }
